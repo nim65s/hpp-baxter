@@ -47,11 +47,13 @@ install(FILES
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
 install(FILES
+  urdf/box.urdf
   urdf/baxter.urdf
   urdf/baxter_colman.urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf
   )
 install(FILES
+  srdf/box.srdf
   srdf/baxter.srdf
   srdf/baxter_manipulation.srdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/srdf

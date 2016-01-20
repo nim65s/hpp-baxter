@@ -6,11 +6,11 @@
 <robot name="baxter">
     <gripper name="l_gripper" clearance="0.025">
       <link name="left_gripper"/>
-      <position>0 0 0.032 -0.7071067811865476 0 0.7071067811865476 0</position>
+      <position>0 0 -0.005 -0.7071067811865476 0 0.7071067811865476 0</position>
     </gripper>
     <gripper name="r_gripper" clearance="0.025">
       <link name="right_gripper"/>
-      <position>0 0 0.032 -0.7071067811865476 0 0.7071067811865476 0</position>
+      <position>0 0 -0.005 -0.7071067811865476 0 0.7071067811865476 0</position>
     </gripper>
 
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
