@@ -22,14 +22,14 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
 INCLUDE(cmake/python.cmake)
+INCLUDE(cmake/hpp.cmake)
 
 SET(PROJECT_NAME hpp-baxter)
 SET(PROJECT_DESCRIPTION "Wrappers for Baxter robot in HPP.")
-SET(PROJECT_URL "https://github.com/jmirabel/hpp-baxter")
 
 FINDPYTHON()
 
-SETUP_PROJECT()
+SETUP_HPP_PROJECT()
 
 # Activate hpp-util logging if requested
 SET (HPP_DEBUG FALSE CACHE BOOL "trigger hpp-util debug output")
@@ -67,4 +67,4 @@ install (FILES
   src/hpp/corbaserver/manipulation/baxter/__init__.py
   DESTINATION ${PYTHON_SITELIB}/hpp/corbaserver/manipulation/baxter)
 
-SETUP_PROJECT_FINALIZE()
+SETUP_HPP_PROJECT_FINALIZE()
