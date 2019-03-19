@@ -1,11 +1,11 @@
 <package>
   <name>hpp-baxter</name>
-  <version>0.1.0</version>
+  <version>4.4.0</version>
   <description>
     Wrappers for Baxter robot in HPP.
   </description>
   <author>Joseph Mirabel</author>
   <maintainer email="hpp@laas.fr">Joseph Mirabel</maintainer>
-  <license>LGPL v2</license>
+  <license>BSD</license>
   <build_depend>hpp-corbaserver</build_depend>
 </package>
