@@ -8,21 +8,15 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 
 SET(CXX_DISABLE_WERROR TRUE)
 INCLUDE(cmake/base.cmake)
-INCLUDE(cmake/python.cmake)
 INCLUDE(cmake/hpp.cmake)
+INCLUDE(cmake/hpp/python.cmake)
 
 SET(PROJECT_NAME hpp-baxter)
 SET(PROJECT_DESCRIPTION "Wrappers for Baxter robot in HPP.")
 
-FINDPYTHON()
+HPP_FINDPYTHON()
 
 SETUP_HPP_PROJECT()
-
-# Activate hpp-util logging if requested
-SET (HPP_DEBUG FALSE CACHE BOOL "trigger hpp-util debug output")
-IF (HPP_DEBUG)
-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHPP_DEBUG")
-ENDIF()
 
 ADD_REQUIRED_DEPENDENCY("hpp-corbaserver >= 3")
 

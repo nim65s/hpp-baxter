@@ -3,4 +3,4 @@
 # Author: Joseph Mirabel
 #
 
-from robot import Robot
+from .robot import Robot
