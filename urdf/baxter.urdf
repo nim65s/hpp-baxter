@@ -124,7 +124,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="head_camera">
+  <link name="head_camera_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -226,10 +226,10 @@
     <parent link="head"/>
     <child link="screen"/>
   </joint>
-  <joint name="head_camera" type="fixed">
+  <joint name="head_camera_joint" type="fixed">
     <origin rpy="1.75057 0 1.57079632679" xyz="0.12839 0 0.06368"/>
     <parent link="head"/>
-    <child link="head_camera"/>
+    <child link="head_camera_link"/>
   </joint>
   <joint name="display_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.0 -0.016 0.0"/>
@@ -437,7 +437,7 @@
       <inertia ixx="0.00025289155" ixy="0.00000575311" ixz="-0.00000159345" iyy="0.0002688601" iyz="-0.00000519818" izz="0.0003074118"/>
     </inertial>
   </link>
-  <link name="right_hand">
+  <link name="right_hand_link">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -450,7 +450,7 @@
       <inertia ixx="0.00017588" ixy="0.00000147073" ixz="0.0000243633" iyy="0.00021166377" iyz="0.00000172689" izz="0.00023745397"/>
     </inertial>
   </link>
-  <link name="right_hand_camera">
+  <link name="right_hand_camera_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -466,14 +466,14 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="right_hand_camera_axis">
+  <link name="right_hand_camera_axis_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="right_hand_range">
+  <link name="right_hand_range_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -489,7 +489,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="right_hand_accelerometer">
+  <link name="right_hand_accelerometer_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -584,31 +584,31 @@
     <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
-  <joint name="right_hand" type="fixed">
+  <joint name="right_hand_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.11355"/>
     <axis xyz="0 0 1"/>
     <parent link="right_wrist"/>
-    <child link="right_hand"/>
+    <child link="right_hand_link"/>
   </joint>
-  <joint name="right_hand_camera" type="fixed">
+  <joint name="right_hand_camera_joint" type="fixed">
     <origin rpy="0 0 -1.57079633" xyz="0.03825 0.012 0.015355"/>
-    <parent link="right_hand"/>
-    <child link="right_hand_camera"/>
+    <parent link="right_hand_link"/>
+    <child link="right_hand_camera_link"/>
   </joint>
-  <joint name="right_hand_camera_axis" type="fixed">
+  <joint name="right_hand_camera_axis_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.03825 0.012 0.015355"/>
-    <parent link="right_hand"/>
-    <child link="right_hand_camera_axis"/>
+    <parent link="right_hand_link"/>
+    <child link="right_hand_camera_axis_link"/>
   </joint>
-  <joint name="right_hand_range" type="fixed">
+  <joint name="right_hand_range_joint" type="fixed">
     <origin rpy="0 -1.57079632679 -1.57079632679" xyz="0.032 -0.020245 0.0288"/>
-    <parent link="right_hand"/>
-    <child link="right_hand_range"/>
+    <parent link="right_hand_link"/>
+    <child link="right_hand_range_link"/>
   </joint>
-  <joint name="right_hand_accelerometer" type="fixed">
+  <joint name="right_hand_accelerometer_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.00198 0.000133 -0.0146"/>
-    <parent link="right_hand"/>
-    <child link="right_hand_accelerometer"/>
+    <parent link="right_hand_link"/>
+    <child link="right_hand_accelerometer_link"/>
   </joint>
   <link name="left_arm_mount">
     <!-- all defaults -->
@@ -805,7 +805,7 @@
       <inertia ixx="0.00025289155" ixy="0.00000575311" ixz="-0.00000159345" iyy="0.0002688601" iyz="-0.00000519818" izz="0.0003074118"/>
     </inertial>
   </link>
-  <link name="left_hand">
+  <link name="left_hand_link">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -818,7 +818,7 @@
       <inertia ixx="0.00017588" ixy="0.00000147073" ixz="0.0000243633" iyy="0.00021166377" iyz="0.00000172689" izz="0.00023745397"/>
     </inertial>
   </link>
-  <link name="left_hand_camera">
+  <link name="left_hand_camera_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -834,14 +834,14 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="left_hand_camera_axis">
+  <link name="left_hand_camera_axis_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="left_hand_range">
+  <link name="left_hand_range_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -857,7 +857,7 @@
       <inertia ixx="1e-08" ixy="0" ixz="0" iyy="1e-08" iyz="0" izz="1e-08"/>
     </inertial>
   </link>
-  <link name="left_hand_accelerometer">
+  <link name="left_hand_accelerometer_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -952,31 +952,31 @@
     <limit effort="15.0" lower="-3.059" upper="3.059" velocity="4.0"/>
     <dynamics damping="0.7" friction="0.0"/>
   </joint>
-  <joint name="left_hand" type="fixed">
+  <joint name="left_hand_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.11355"/>
     <axis xyz="0 0 1"/>
     <parent link="left_wrist"/>
-    <child link="left_hand"/>
+    <child link="left_hand_link"/>
   </joint>
-  <joint name="left_hand_camera" type="fixed">
+  <joint name="left_hand_camera_joint" type="fixed">
     <origin rpy="0 0 -1.57079633" xyz="0.03825 0.012 0.015355"/>
-    <parent link="left_hand"/>
-    <child link="left_hand_camera"/>
+    <parent link="left_hand_link"/>
+    <child link="left_hand_camera_link"/>
   </joint>
-  <joint name="left_hand_camera_axis" type="fixed">
+  <joint name="left_hand_camera_axis_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.03825 0.012 0.015355"/>
-    <parent link="left_hand"/>
-    <child link="left_hand_camera_axis"/>
+    <parent link="left_hand_link"/>
+    <child link="left_hand_camera_axis_link"/>
   </joint>
-  <joint name="left_hand_range" type="fixed">
+  <joint name="left_hand_range_joint" type="fixed">
     <origin rpy="0 -1.57079632679 -1.57079632679" xyz="0.032 -0.020245 0.0288"/>
-    <parent link="left_hand"/>
-    <child link="left_hand_range"/>
+    <parent link="left_hand_link"/>
+    <child link="left_hand_range_link"/>
   </joint>
-  <joint name="left_hand_accelerometer" type="fixed">
+  <joint name="left_hand_accelerometer_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.00198 0.000133 -0.0146"/>
-    <parent link="left_hand"/>
-    <child link="left_hand_accelerometer"/>
+    <parent link="left_hand_link"/>
+    <child link="left_hand_accelerometer_link"/>
   </joint>
   <link name="pedestal">
     <visual>
@@ -1006,7 +1006,7 @@
     <child link="pedestal"/>
   </joint>
   <!-- Base of end effector -->
-  <link name="left_gripper_base">
+  <link name="left_gripper_base_link">
     <visual>
       <origin rpy="-1.57079632679 3.14159265359 0" xyz="0 0 0"/>
       <geometry>
@@ -1141,15 +1141,15 @@
     <child link="l_gripper_r_finger_tip"/>
   </joint>
   <!-- Electric Gripper Base Joint -->
-  <joint name="left_gripper_base" type="fixed">
+  <joint name="left_gripper_base_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.025"/>
-    <parent link="left_hand"/>
-    <child link="left_gripper_base"/>
+    <parent link="left_hand_link"/>
+    <child link="left_gripper_base_link"/>
   </joint>
   <!-- Electric Gripper Tip joint -->
   <joint name="left_endpoint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.1327"/>
-    <parent link="left_gripper_base"/>
+    <parent link="left_gripper_base_link"/>
     <child link="left_gripper"/>
   </joint>
   <!-- Electric Gripper Tip link -->
@@ -1163,7 +1163,7 @@
   <joint name="l_gripper_l_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.0 -0.0015 0.02"/>
     <axis xyz="0 1 0"/>
-    <parent link="left_gripper_base"/>
+    <parent link="left_gripper_base_link"/>
     <child link="l_gripper_l_finger"/>
     <limit effort="20.0" lower="0.0" upper="0.020833" velocity="5.0"/>
     <dynamics damping="0.7" friction="0.0"/>
@@ -1171,7 +1171,7 @@
   <joint name="l_gripper_r_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.0 0.0015 0.02"/>
     <axis xyz="0 1 0"/>
-    <parent link="left_gripper_base"/>
+    <parent link="left_gripper_base_link"/>
     <child link="l_gripper_r_finger"/>
     <limit effort="20.0" lower="-0.020833" upper="0.0" velocity="5.0"/>
     <mimic joint="l_gripper_l_finger_joint" multiplier="-1.0"/>
@@ -1204,7 +1204,7 @@
     <implicitSpringDamper>1</implicitSpringDamper>
   </gazebo>
   <!-- Base of end effector -->
-  <link name="right_gripper_base">
+  <link name="right_gripper_base_link">
     <visual>
       <origin rpy="-1.57079632679 3.14159265359 0" xyz="0 0 0"/>
       <geometry>
@@ -1339,15 +1339,15 @@
     <child link="r_gripper_r_finger_tip"/>
   </joint>
   <!-- Electric Gripper Base Joint -->
-  <joint name="right_gripper_base" type="fixed">
+  <joint name="right_gripper_base_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.025"/>
-    <parent link="right_hand"/>
-    <child link="right_gripper_base"/>
+    <parent link="right_hand_link"/>
+    <child link="right_gripper_base_link"/>
   </joint>
   <!-- Electric Gripper Tip joint -->
   <joint name="right_endpoint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0.1327"/>
-    <parent link="right_gripper_base"/>
+    <parent link="right_gripper_base_link"/>
     <child link="right_gripper"/>
   </joint>
   <!-- Electric Gripper Tip link -->
@@ -1361,7 +1361,7 @@
   <joint name="r_gripper_l_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.0 -0.0015 0.02"/>
     <axis xyz="0 1 0"/>
-    <parent link="right_gripper_base"/>
+    <parent link="right_gripper_base_link"/>
     <child link="r_gripper_l_finger"/>
     <limit effort="20.0" lower="0.0" upper="0.020833" velocity="5.0"/>
     <dynamics damping="0.7" friction="0.0"/>
@@ -1369,7 +1369,7 @@
   <joint name="r_gripper_r_finger_joint" type="prismatic">
     <origin rpy="0 0 0" xyz="0.0 0.0015 0.02"/>
     <axis xyz="0 1 0"/>
-    <parent link="right_gripper_base"/>
+    <parent link="right_gripper_base_link"/>
     <child link="r_gripper_r_finger"/>
     <limit effort="20.0" lower="-0.020833" upper="0.0" velocity="5.0"/>
     <mimic joint="r_gripper_l_finger_joint" multiplier="-1.0"/>
