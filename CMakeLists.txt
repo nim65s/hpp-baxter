@@ -4,19 +4,19 @@
 #
 #
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-
-SET(CXX_DISABLE_WERROR TRUE)
-INCLUDE(cmake/base.cmake)
-INCLUDE(cmake/hpp.cmake)
-INCLUDE(cmake/python.cmake)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 SET(PROJECT_NAME hpp-baxter)
 SET(PROJECT_DESCRIPTION "Wrappers for Baxter robot in HPP.")
 
-FINDPYTHON()
+SET(CXX_DISABLE_WERROR TRUE)
+INCLUDE(cmake/hpp.cmake)
+INCLUDE(cmake/python.cmake)
 
-SETUP_HPP_PROJECT()
+COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES CXX C)
+PROJECT(${PROJECT_NAME} ${PROJECT_ARGS})
+
+FINDPYTHON()
 
 ADD_REQUIRED_DEPENDENCY("hpp-corbaserver >= 3")
 
@@ -47,5 +47,3 @@ install (FILES
   src/hpp/corbaserver/manipulation/baxter/robot.py
   src/hpp/corbaserver/manipulation/baxter/__init__.py
   DESTINATION ${PYTHON_SITELIB}/hpp/corbaserver/manipulation/baxter)
-
-SETUP_HPP_PROJECT_FINALIZE()
