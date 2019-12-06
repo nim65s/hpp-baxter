@@ -34,18 +34,6 @@
     </inertial>
   </link>
   <link name="left_torso_itb">
-    <!-- note: invisible -->
-    <!--
-	<visual>
-	<origin xyz="0 0 0" rpy="0 0 0" />
-	<geometry>
-	<box size=".059 0.118  0.032" />
-	</geometry>
-	<material name="white">
-	<color rgba="1 1 1 1" />
-	</material>
-	</visual>
-    -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -53,18 +41,6 @@
     </inertial>
   </link>
   <link name="right_torso_itb">
-    <!-- note: invisible -->
-    <!--
-	<visual>
-	<origin xyz="0 0 0" rpy="0 0 0" />
-	<geometry>
-	<box size=".059 0.118  0.032" />
-	</geometry>
-	<material name="white">
-	<color rgba="1 1 1 1" />
-	</material>
-	</visual>
-    -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -94,7 +70,6 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 .00953"/>
       <geometry>
-        <!-- <cylinder length="0.04" radius="0.09"/> -->
         <mesh filename="package://baxter_description/meshes/head/H0.DAE"/>
       </geometry>
       <material name="darkgray">
@@ -139,7 +114,6 @@
     <visual>
       <origin rpy="0 -1.57079632679 0" xyz="0 -.00953 -.0347"/>
       <geometry>
-        <!-- <box size=".11 0.08  0.01"/> -->
         <mesh filename="package://baxter_description/meshes/head/H1.DAE"/>
       </geometry>
       <material name="darkred">
@@ -185,7 +159,6 @@
     <collision>
       <origin rpy="0 0 0.0" xyz="-0.07 -0.04 0.0"/>
       <geometry>
-        <!-- <cylinder radius="0.18" length="0.4" /> -->
         <sphere radius="0.22"/>
       </geometry>
     </collision>
@@ -206,10 +179,8 @@
       </material>
     </visual>
     <collision>
-      <!-- <origin xyz="0.0 0.03 0.02" rpy="0 0 0" /> -->
       <origin rpy="0 0 0" xyz="-0.07 0.04 0.00"/>
       <geometry>
-        <!-- <box size="0.34 0.27 0.14" /> -->
         <sphere radius="0.22"/>
       </geometry>
     </collision>
@@ -424,18 +395,6 @@
     </inertial>
   </link>
   <link name="right_arm_itb">
-    <!-- note: invisible -->
-    <!--
-	<visual>
-	<origin xyz="0 0 0" rpy="0 0 0" />
-	<geometry>
-	<box size=".059 0.118  0.032" />
-	</geometry>
-	<material name="white">
-	<color rgba="1 1 1 1" />
-	</material>
-	</visual>
-    -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -487,17 +446,6 @@
     </inertial>
   </link>
   <link name="right_hand_link">
-    <!-- rendered in the mesh
-	 <visual>
-	 <origin xyz="0 0 -0.0232" rpy="0 0 0" />
-	 <geometry>
-	 <cylinder radius="0.04" length="0.0464" />
-	 </geometry>
-	 <material name="darkred">
-	 <color rgba=".5 .1 .1 1" />
-	 </material>
-	 </visual>
-    -->
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -527,15 +475,6 @@
     </inertial>
   </link>
   <link name="right_hand_camera_axis_link">
-    <!--visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-	<cylinder radius="0.02" length="0.01" />
-        </geometry>
-        <material name="blue">
-	<color rgba="0 0 1 0.8" />
-        </material>
-	</visual-->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -912,18 +851,6 @@
     </inertial>
   </link>
   <link name="left_arm_itb">
-    <!-- note: invisible -->
-    <!--
-	<visual>
-	<origin xyz="0 0 0" rpy="0 0 0" />
-	<geometry>
-	<box size=".059 0.118  0.032" />
-	</geometry>
-	<material name="white">
-	<color rgba="1 1 1 1" />
-	</material>
-	</visual>
-    -->
     <inertial>
       <origin rpy="0 0 0" xyz="0.000000 0.000000 0.000000"/>
       <mass value="0.0001"/>
@@ -975,17 +902,6 @@
     </inertial>
   </link>
   <link name="left_hand_link">
-    <!-- rendered in the mesh
-	 <visual>
-	 <origin xyz="0 0 -0.0232" rpy="0 0 0" />
-	 <geometry>
-	 <cylinder radius="0.04" length="0.0464" />
-	 </geometry>
-	 <material name="darkred">
-	 <color rgba=".5 .1 .1 1" />
-	 </material>
-	 </visual>
-    -->
     <collision>
       <origin rpy="0 0 0" xyz="0 0 -0.0232"/>
       <geometry>
@@ -1015,15 +931,6 @@
     </inertial>
   </link>
   <link name="left_hand_camera_axis_link">
-    <!--visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-	<cylinder radius="0.02" length="0.01" />
-        </geometry>
-        <material name="blue">
-	<color rgba="0 0 1 0.8" />
-        </material>
-	</visual-->
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.0001"/>
@@ -1265,18 +1172,6 @@
 
   <link name="camera_link">
     <inertial_sphere diameter="0.07" mass="0.01"/>
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://baxter_description/meshes/kinect_camera/kinect_camera_simple.dae"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://baxter_description/meshes/kinect_camera/kinect_camera_simple.stl"/>
-      </geometry>
-    </collision>
   </link>
 
   <joint name="camera_joint" type="fixed">
