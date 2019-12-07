@@ -16,13 +16,8 @@ from hpp.corbaserver.manipulation.robot import Robot as Parent
 class Robot (Parent):
     ##
     #  Information to retrieve urdf and srdf files.
-    packageName = "hpp-baxter"
-    meshPackageName = "baxter_description"
-    ##
-    #  Information to retrieve urdf and srdf files.
-    urdfName = "baxter"
-    urdfSuffix = "_colman"
-    srdfSuffix = "_manipulation"
+    urdfFilename = "package://hpp-baxter/urdf/baxter.urdf"
+    srdfFilename = "package://hpp-baxter/srdf/baxter_manipulation.srdf"
 
     ## Constructor
     # \param compositeName name of the composite robot that will be built later,
