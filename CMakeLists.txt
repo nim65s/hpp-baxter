@@ -39,6 +39,8 @@ install(FILES
   srdf/baxter_manipulation.srdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/srdf
   )
+install(DIRECTORY meshes
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install (FILES
   src/hpp/corbaserver/baxter/robot.py
   src/hpp/corbaserver/baxter/__init__.py
