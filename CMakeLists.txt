@@ -1,15 +1,16 @@
 #
-# Copyright (c) 2016 CNRS
-# Authors: Joseph Mirabel
+# Copyright (c) 2016, 2020 CNRS
+# Authors: Joseph Mirabel, Guilhem Saurel
 #
 #
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 SET(PROJECT_NAME hpp-baxter)
 SET(PROJECT_DESCRIPTION "Wrappers for Baxter robot in HPP.")
 
-SET(CXX_DISABLE_WERROR TRUE)
+SET(PROJECT_USE_CMAKE_EXPORT TRUE)
+
 INCLUDE(cmake/hpp.cmake)
 INCLUDE(cmake/python.cmake)
 
@@ -18,7 +19,7 @@ PROJECT(${PROJECT_NAME} ${PROJECT_ARGS})
 
 FINDPYTHON()
 
-ADD_REQUIRED_DEPENDENCY("hpp-corbaserver >= 3")
+ADD_PROJECT_DEPENDENCY("hpp-corbaserver" REQUIRED)
 
 SET(CATKIN_PACKAGE_SHARE_DESTINATION
   ${CMAKE_INSTALL_DATAROOTDIR}/${PROJECT_NAME})
@@ -49,3 +50,6 @@ install (FILES
   src/hpp/corbaserver/manipulation/baxter/robot.py
   src/hpp/corbaserver/manipulation/baxter/__init__.py
   DESTINATION ${PYTHON_SITELIB}/hpp/corbaserver/manipulation/baxter)
+
+ADD_LIBRARY(${PROJECT_NAME} INTERFACE)
+INSTALL(TARGETS ${PROJECT_NAME} EXPORT ${TARGETS_EXPORT_NAME} DESTINATION lib)
