@@ -7,5 +7,4 @@
   <author>Joseph Mirabel</author>
   <maintainer email="hpp@laas.fr">Joseph Mirabel</maintainer>
   <license>BSD</license>
-  <build_depend>hpp-corbaserver</build_depend>
 </package>
