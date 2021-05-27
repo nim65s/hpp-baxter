@@ -7,4 +7,6 @@
   <author>Joseph Mirabel</author>
   <maintainer email="hpp@laas.fr">Joseph Mirabel</maintainer>
   <license>BSD</license>
+  <test_depend>example-robot-data</test_depend>
+  <exec_depend>example-robot-data</exec_depend>
 </package>
