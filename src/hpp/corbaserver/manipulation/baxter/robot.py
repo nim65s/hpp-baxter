@@ -10,7 +10,8 @@ from hpp.corbaserver.manipulation.robot import Robot as Parent
 #  Control of robot Baxter in hpp
 #
 #  This class implements a client to the corba server implemented in
-#  hpp-manipulation-corba. It derive from class hpp.corbaserver.manipulation.robot.Robot.
+#  hpp-manipulation-corba.
+#  It derive from class hpp.corbaserver.manipulation.robot.Robot.
 #
 #  At creation of an instance, the urdf and srdf files are loaded using
 #  idl interface hpp::corbaserver::Robot::loadRobotModel.
@@ -28,6 +29,8 @@ class Robot(Parent):
     #        problem.
     # \param rootJointType type of root joint among ("freeflyer", "planar",
     #        "anchor"),
-    def __init__(self, compositeName, robotName, load=True, rootJointType="anchor", **kwargs):
+    def __init__(
+        self, compositeName, robotName, load=True, rootJointType="anchor", **kwargs
+    ):
         Parent.__init__(self, compositeName, robotName, rootJointType, load, **kwargs)
         self.tf_root = "base_footprint"
