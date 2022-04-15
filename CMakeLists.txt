@@ -17,11 +17,7 @@ INCLUDE(cmake/python.cmake)
 COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES CXX C)
 PROJECT(${PROJECT_NAME} ${PROJECT_ARGS})
 
-ADD_PROJECT_DEPENDENCY(example-robot-data REQUIRED)
-if(${example-robot-data_VERSION} VERSION_LESS 3.9.1)
-  message(FATAL_ERROR
-    "example-robot-data version (${example-robot-data_VERSION}) is too old. Please update to 3.9.1 or newer")
-endif()
+ADD_PROJECT_DEPENDENCY(example-robot-data 3.9.1 REQUIRED)
 
 FINDPYTHON()
 
