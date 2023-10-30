@@ -2,7 +2,7 @@
 # Copyright (c) 2016, 2020 CNRS Authors: Joseph Mirabel, Guilhem Saurel
 #
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME hpp-baxter)
 set(PROJECT_DESCRIPTION "Wrappers for Baxter robot in HPP.")
