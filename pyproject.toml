@@ -1,5 +1,21 @@
-[tool.black]
-exclude = "cmake"
+[build-system]
+build-backend = "cmeel.build"
+requires = [
+  "cmeel[build]",
+  "example-robot-data[build]"
+]
+
+[project]
+dependencies = [
+  "example-robot-data"
+]
+description = "Wrappers for Baxter robot in HPP."
+license = "BSD-2-Clause"
+name = "hpp-baxter"
+version = "5.0.0"
 
 [tool.isort]
 profile = "black"
+
+[tool.tomlsort]
+all = true
