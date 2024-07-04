@@ -1,6 +1,11 @@
 {
   description = "Wrappers for Baxter robot in HPP";
 
+  nixConfig = {
+    extra-substituters = [ "https://gepetto.cachix.org" ];
+    extra-trusted-public-keys = [ "gepetto.cachix.org-1:toswMl31VewC0jGkN6+gOelO2Yom0SOHzPwJMY2XiDY=" ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nim65s/nixpkgs/gepetto";
     flake-parts = {
