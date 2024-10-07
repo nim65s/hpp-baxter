@@ -25,6 +25,8 @@
           packages = {
             default = self'.packages.hpp-baxter;
             hpp-baxter = pkgs.python3Packages.hpp-baxter.overrideAttrs (_: {
+              # TODO: remove this after next release
+              patches = [];
               src = pkgs.lib.fileset.toSource {
                 root = ./.;
                 fileset = pkgs.lib.fileset.unions [
