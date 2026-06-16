@@ -1,12 +1,19 @@
-<package>
-  <name>hpp-baxter</name>
+<?xml version='1.0'?>
+<package format='3'>
+  <name>hpp_baxter</name>
   <version>8.0.0</version>
-  <description>
-    Wrappers for Baxter robot in HPP.
-  </description>
+  <description>Wrappers for Baxter robot in HPP</description>
   <author>Joseph Mirabel</author>
-  <maintainer email="hpp@laas.fr">Joseph Mirabel</maintainer>
-  <license>BSD</license>
-  <test_depend>example-robot-data</test_depend>
-  <exec_depend>example-robot-data</exec_depend>
+  <maintainer email='guilhem.saurel@laas.fr'>Guilhem Saurel</maintainer>
+  <license>BSD-2-Clause</license>
+
+  <depend>coal</depend>
+  <depend>example_robot_data</depend>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <build_depend>jrl_cmakemodules</build_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
 </package>
