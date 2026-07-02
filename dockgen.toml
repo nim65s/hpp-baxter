@@ -3,5 +3,5 @@ configure_args = ["-DBUILD_PYTHON_INTERFACE=OFF"]
 url = "github:gepetto"
 
 [hpp-baxter]
-url = "."
 src_deps = ["example-robot-data"]
+url = "."
